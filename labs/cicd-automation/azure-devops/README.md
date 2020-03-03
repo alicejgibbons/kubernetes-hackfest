@@ -145,7 +145,8 @@ In the deployment pipeline, we will create a Helm task to update our application
     * For Namespace, enter "hackfest"
     * For the Command select "upgrade"
     * For Chart type select "File Path"
-    * For Chart path, click the "..." button and browse to the "service-trakcer-ui" chart in the charts directory
+    * For Chart path, click the "..." button and browse to the "service-tracker-ui" chart in the charts directory
+        `$(System.DefaultWorkingDirectory)/_kubernetes-hackfest-CI/charts/service-tracker-ui`
     * For the Release Name, enter `service-tracker-ui`
     * For Set Values you will need to fix the ACR server to match your ACR server name and the imageTag needs to be set.
         Eg - `deploy.acrServer=acrhackfestbrian13932.azurecr.io,deploy.imageTag=azuredevops-$(Build.BuildId)`
